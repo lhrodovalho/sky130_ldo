@@ -6,6 +6,7 @@
     X1 ref y x  gp vddhi vss amp
     R1 vddlo y   35k
     R2 y     vss 55k
+    CM vddlo x 10p
 
     X2 vddlo x vddhi vddhi sky130_fd_pr__pfet_g5v0d10v5  w=3.0 l=0.5 m=16
 
