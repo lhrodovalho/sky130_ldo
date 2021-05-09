@@ -15,20 +15,21 @@ VSS   vss   0 0.0
 X0 vddhi vddlo vss ldo
 RL vddlo vss {pRL}
 
-.option gmin=1e-21
+*.option gmin=1e-21
 .control
 
-    dc temp -55 125 1
-    plot vddlo
-    plot x0.ref
+*    dc temp -55 125 1
+*    plot vddlo
+*    plot x0.ref
 
-    dc VDDHI 0 3.3 0.001
+    dc VDDHI 1.5 3.3 1m
     plot vddhi vddlo x0.ref x0.x
 
+    op
     ac dec 100 1 1G
     plot 20*log10(vddlo)
 
-    tran 0.01m 10m
+    tran 1u 2m
     plot vddhi vddlo
     
 .endc
