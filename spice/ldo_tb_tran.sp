@@ -1,8 +1,8 @@
 * LDO testbench
 
 * Include SkyWater sky130 device models
-.lib "~/GitHub/skywater-pdk/libraries/sky130_fd_pr/latest/models/sky130.lib.spice" tt
-*.include "setup.sp"
+.lib "/usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.param mc_mm_switch=0
 .include "ldo.sp"
 
 .param pvdd = 3.3
